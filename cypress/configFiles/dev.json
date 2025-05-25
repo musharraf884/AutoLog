@@ -1,0 +1,7 @@
+{
+  "baseUrl": "https://dev.dismantly.ai/",
+  "env": {
+    "email": "admin+muhammad@genius-autos.com",
+    "password": "Testing@123"
+  }
+}

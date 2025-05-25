@@ -1,0 +1,27 @@
+{
+  "name": "dismantly-test",
+  "version": "1.0.0",
+  "description": "This is e2e testing framework for dismantly",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx cypress run --record",
+    "run-chrome": "npx cypress run --browser chrome",
+    "run-chrome-headed": "npx cypress run --headed --browser chrome",
+    "report-To-dashboard": "npx cypress run --record --key de0f622a-9248-40da-8313-c3f484995d37 --browser chrome --headed",
+    "homePage": "cypress run --record --spec cypress/e2e/homePage.cy.js --headed --chrome"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "-": "^0.0.1",
+    "@faker-js/faker": "^8.4.1",
+    "cypress": "^13.8.0",
+    "cypress-file-upload": "^5.0.8",
+    "save-dev": "^0.0.1-security",
+    "typescript": "^5.4.3"
+  },
+  "devDependencies": {
+    "@types/cypress": "^1.1.3",
+    "cypress-mochawesome-reporter": "^3.8.2"
+  }
+}

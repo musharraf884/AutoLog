@@ -1,0 +1,185 @@
+Add Invoice
+    ✓ TC-1 Add Invoice Successfully (35987ms)
+    1) TC-2 Add Invoice with Multiple Line Items
+    ✓ TC-3A Add Invoice Successfully with Approve & Email Approve (26788ms)
+    ✓ TC-3B Add Invoice Successfully with Approved and add another (26161ms)
+    ✓ TC-3C Add Invoice Successfully with Approved and print (25796ms)
+    ✓ TC-4 Add Invoice with Tax Calculation (26367ms)
+    ✓ TC-5 Add Invoice - Change Quantity, Price, Amount, Tax Rate and Tax (36024ms)
+    ✓ TC-5-B  Add Invoice with Missing Information (6239ms)
+    2) TC-6 Verify error on adding Invalid invoice Item
+    ✓ TC-7 Verify Tax Rate with Account (20324ms)
+    3) TC-8 Verify line Item with one field present (like Quantity)
+    ✓ TC- 9 Verify line Item with only description present (18689ms)
+    ✓ TC-10 Delete Line Items (6758ms)
+    ✓ TC-11 Cancel Add Invoice (6067ms)
+    ✓ TC-12 Preview Add Invoice (10385ms)
+    ✓ TC-13 Edit Previously Created Invoice Successfully (10163ms)
+    ✓ TC-14 Edit the Previously Created Invoice and add new Line Items save it (32675ms)
+    ✓ TC-15 Edit the Previously Created Invoice with Save & Print, Save & Print Packing Slip (18395ms)
+    ✓ TC_16 Edit the Previously Created Invoice with Tax Calculation (24718ms)
+    4) TC-17 Edit the Previously Created Invoice and Change Quantity, Price, Amount, Tax Rate and Tax
+    5) TC-18 Edit the Previously Created Invoice which have some Missing some Information and save it 
+    ✓ TC-19  (11677ms)
+    ✓ TC-20 Edit the Previously Created Invoice and Validate enter Invalid  Tax Rate with Account (12553ms)
+    ✓ TC-21 Edit the Previously created Invoice and Verify line Item with one field present (like Quantity) (8335ms)
+    ✓ TC-22 Edit the Previously created Invoice and Verify the line Item with only the description present (8666ms)
+    6) TC-23 Edit the Previously created Invoice and Delete Line Items 
+    ✓ TC-24 Edit the Previously created Invoice and Cancel Changes  Invoice (34981ms)
+    ✓ TC-25 Edit the Previously created Invoice and Preview Edit Invoice (7810ms)
+    ✓ TC-26 Preview Invoice and verify some field like contact, quantity and price  (22227ms)
+    7) TC-27 Email Invoice With XERO
+    8) TC-28 Approved and Print Invoice With XERO
+    - TC-29 Email Invoice Without XERO 
+    - TC-30 Print Invoice Without XERO 
+    ✓ TC-31 Approved invooice  (28809ms)
+    ✓ TC-32 Print Without Part Prices (10395ms)
+    9) TC-33  Add the full Payment on the Invoice
+
+
+  25 passing (26m)
+  2 pending
+  9 failing
+
+  1) Add Invoice
+       TC-2 Add Invoice with Multiple Line Items:
+     AssertionError: Timed out retrying after 100000ms: Expected to find element: `label[data-test="Due Date-label"]`, but never found it.
+      at InvoiceAction.addInvoiceDetails (webpack://dismantly-test/./cypress/support/portal/actions/InvoiceAction.ts:36:0)
+      at Context.eval (webpack://dismantly-test/./cypress/tests/Portal/Invoice/Invoice.ts:33:0)
+
+  2) Add Invoice
+       TC-6 Verify error on adding Invalid invoice Item:
+     AssertionError: Timed out retrying after 100000ms: expected '<div.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation0.MuiAlert-root.MuiAlert-standardError.MuiAlert-standard.css-p2bytd>' to be 'visible'
+
+This element `<div.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation0.MuiAlert-root.MuiAlert-standardError.MuiAlert-standard.css-p2bytd>` is not visible because it has CSS property: `visibility: hidden`
+      at InvoiceAction.verifyErrorToastMsg (webpack://dismantly-test/./cypress/support/portal/actions/InvoiceAction.ts:173:0)
+      at Context.eval (webpack://dismantly-test/./cypress/tests/Portal/Invoice/Invoice.ts:182:0)
+
+  3) Add Invoice
+       TC-8 Verify line Item with one field present (like Quantity):
+     AssertionError: Timed out retrying after 100000ms: Expected to find element: `label[data-test="Due Date-label"]`, but never found it.
+      at InvoiceAction.addInvoiceDetails (webpack://dismantly-test/./cypress/support/portal/actions/InvoiceAction.ts:36:0)
+      at Context.eval (webpack://dismantly-test/./cypress/tests/Portal/Invoice/Invoice.ts:198:0)
+
+  4) Add Invoice
+       TC-17 Edit the Previously Created Invoice and Change Quantity, Price, Amount, Tax Rate and Tax:
+     AssertionError: Timed out retrying after 100000ms: Expected to find element: `div[data-test="Actions-button"]`, but never found it.
+      at InvoiceAction.deleteInvoice (webpack://dismantly-test/./cypress/support/portal/actions/InvoiceAction.ts:176:0)
+      at Context.eval (webpack://dismantly-test/./cypress/tests/Portal/Invoice/Invoice.ts:339:0)
+
+  5) Add Invoice
+       TC-18 Edit the Previously Created Invoice which have some Missing some Information and save it :
+     CypressError: Timed out retrying after 100000ms: `cy.clear()` failed because this element:
+
+`<input name="sales_channel" aria-hidden="true" tabindex="-1" class="MuiSelect-nativeInput css-1k3x8v3" data-test="sales_channel-select-input" value="">`
+
+has CSS `pointer-events: none`
+
+`pointer-events: none` prevents user mouse interaction.
+
+Fix this problem, or use {force: true} to disable error checking.
+
+https://on.cypress.io/element-cannot-be-interacted-with
+      at ensureElDoesNotHaveCSS (https://dev.dismantly.ai/__cypress/runner/cypress_runner.js:111888:66)
+      at ensureDescendents (https://dev.dismantly.ai/__cypress/runner/cypress_runner.js:111996:5)
+      at ensureDescendentsAndScroll (https://dev.dismantly.ai/__cypress/runner/cypress_runner.js:112004:14)
+      at ensureElIsNotCovered (https://dev.dismantly.ai/__cypress/runner/cypress_runner.js:112135:5)
+      at runAllChecks (https://dev.dismantly.ai/__cypress/runner/cypress_runner.js:112334:52)
+      at retryActionability (https://dev.dismantly.ai/__cypress/runner/cypress_runner.js:112371:16)
+      at tryCatcher (https://dev.dismantly.ai/__cypress/runner/cypress_runner.js:1807:23)
+      at Promise.attempt.Promise.try (https://dev.dismantly.ai/__cypress/runner/cypress_runner.js:4315:29)
+      at whenStable (https://dev.dismantly.ai/__cypress/runner/cypress_runner.js:144032:68)
+      at <unknown> (https://dev.dismantly.ai/__cypress/runner/cypress_runner.js:143973:14)
+      at tryCatcher (https://dev.dismantly.ai/__cypress/runner/cypress_runner.js:1807:23)
+      at Promise._settlePromiseFromHandler (https://dev.dismantly.ai/__cypress/runner/cypress_runner.js:1519:31)
+      at Promise._settlePromise (https://dev.dismantly.ai/__cypress/runner/cypress_runner.js:1576:18)
+      at Promise._settlePromise0 (https://dev.dismantly.ai/__cypress/runner/cypress_runner.js:1621:10)
+      at Promise._settlePromises (https://dev.dismantly.ai/__cypress/runner/cypress_runner.js:1701:18)
+      at Promise._fulfill (https://dev.dismantly.ai/__cypress/runner/cypress_runner.js:1645:18)
+      at <unknown> (https://dev.dismantly.ai/__cypress/runner/cypress_runner.js:5450:46)
+  From Your Spec Code:
+      at InvoiceAction.addSalesChannel (webpack://dismantly-test/./cypress/support/portal/actions/InvoiceAction.ts:41:0)
+      at Context.eval (webpack://dismantly-test/./cypress/tests/Portal/Invoice/Invoice.ts:345:0)
+
+  6) Add Invoice
+       TC-23 Edit the Previously created Invoice and Delete Line Items :
+     AssertionError: Timed out retrying after 100000ms: Expected to find element: `label[data-test="Due Date-label"]`, but never found it.
+      at InvoiceAction.addInvoiceDetails (webpack://dismantly-test/./cypress/support/portal/actions/InvoiceAction.ts:36:0)
+      at Context.eval (webpack://dismantly-test/./cypress/tests/Portal/Invoice/Invoice.ts:390:0)
+
+  7) Add Invoice
+       TC-27 Email Invoice With XERO:
+     AssertionError: Timed out retrying after 100000ms: expected '<div.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation0.MuiAlert-root.MuiAlert-standardSuccess.MuiAlert-standard.css-1sn8gce>' to be 'visible'
+
+This element `<div.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation0.MuiAlert-root.MuiAlert-standardSuccess.MuiAlert-standard.css-1sn8gce>` is not visible because it has CSS property: `visibility: hidden`
+      at InvoiceAction.verifySuccessToastMsg (webpack://dismantly-test/./cypress/support/portal/actions/InvoiceAction.ts:170:0)
+      at Context.eval (webpack://dismantly-test/./cypress/tests/Portal/Invoice/Invoice.ts:460:0)
+
+  8) Add Invoice
+       TC-28 Approved and Print Invoice With XERO:
+     AssertionError: Timed out retrying after 100000ms: Expected to find element: `label[data-test="Due Date-label"]`, but never found it.
+      at InvoiceAction.addInvoiceDetails (webpack://dismantly-test/./cypress/support/portal/actions/InvoiceAction.ts:36:0)
+      at Context.eval (webpack://dismantly-test/./cypress/tests/Portal/Invoice/Invoice.ts:467:0)
+
+  9) Add Invoice
+       TC-33  Add the full Payment on the Invoice:
+     AssertionError: Timed out retrying after 100000ms: expected '<div.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation0.MuiAlert-root.MuiAlert-standardSuccess.MuiAlert-standard.css-1sn8gce>' to be 'visible'
+
+This element `<div.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation0.MuiAlert-root.MuiAlert-standardSuccess.MuiAlert-standard.css-1sn8gce>` is not visible because it has CSS property: `visibility: hidden`
+      at InvoiceAction.verifySuccessToastMsg (webpack://dismantly-test/./cypress/support/portal/actions/InvoiceAction.ts:170:0)
+      at Context.eval (webpack://dismantly-test/./cypress/tests/Portal/Invoice/Invoice.ts:519:0)
+
+
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        36                                                                               │
+  │ Passing:      25                                                                               │
+  │ Failing:      9                                                                                │
+  │ Pending:      2                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  9                                                                                │
+  │ Video:        false                                                                            │
+  │ Duration:     25 minutes, 36 seconds                                                           │
+  │ Spec Ran:     Invoice.ts                                                                       │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+  (Screenshots)
+
+  -  /Users/mynamejeff/Dismantly/dismantly-tests/cypress/screenshots/Invoice.ts/Add I     (1440x633)
+     nvoice -- TC-2 Add Invoice with Multiple Line Items (failed).png                               
+  -  /Users/mynamejeff/Dismantly/dismantly-tests/cypress/screenshots/Invoice.ts/Add I     (1440x633)
+     nvoice -- TC-6 Verify error on adding Invalid invoice Item (failed).png                        
+  -  /Users/mynamejeff/Dismantly/dismantly-tests/cypress/screenshots/Invoice.ts/Add I     (1440x685)
+     nvoice -- TC-8 Verify line Item with one field present (like Quantity) (failed).               
+     png                                                                                            
+  -  /Users/mynamejeff/Dismantly/dismantly-tests/cypress/screenshots/Invoice.ts/Add I     (1440x685)
+     nvoice -- TC-17 Edit the Previously Created Invoice and Change Quantity, Price,                
+     Amount, Tax Rate and Tax (failed).png                                                          
+  -  /Users/mynamejeff/Dismantly/dismantly-tests/cypress/screenshots/Invoice.ts/Add I     (1440x685)
+     nvoice -- TC-18 Edit the Previously Created Invoice which have some Missing some               
+      Information and save it (failed).png                                                          
+  -  /Users/mynamejeff/Dismantly/dismantly-tests/cypress/screenshots/Invoice.ts/Add I     (1440x685)
+     nvoice -- TC-23 Edit the Previously created Invoice and Delete Line Items (faile               
+     d).png                                                                                         
+  -  /Users/mynamejeff/Dismantly/dismantly-tests/cypress/screenshots/Invoice.ts/Add I     (1440x685)
+     nvoice -- TC-27 Email Invoice With XERO (failed).png                                           
+  -  /Users/mynamejeff/Dismantly/dismantly-tests/cypress/screenshots/Invoice.ts/Add I     (1440x685)
+     nvoice -- TC-28 Approved and Print Invoice With XERO (failed).png                              
+  -  /Users/mynamejeff/Dismantly/dismantly-tests/cypress/screenshots/Invoice.ts/Add I     (1440x685)
+     nvoice -- TC-33  Add the full Payment on the Invoice (failed).png                              
+
+
+====================================================================================================
+
+  (Run Finished)
+
+
+       Spec                                              Tests  Passing  Failing  Pending  Skipped  
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ ✖  Invoice.ts                               25:36       36       25        9        2        - │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+    ✖  1 of 1 failed (100%)                     25:36       36       25        9        2        -  
